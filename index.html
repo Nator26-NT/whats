@@ -1,0 +1,36 @@
+<style src="babel.css"></style>
+<script src="babel.js"></script>
+<main id="app">
+<nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="#" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a href="#test1">Calls</a></li>
+        <li class="tab active"><a class="active" href="#test2">Chats</a></li>
+        <li class="tab"><a href="#test3">Groups</a></li>
+        <li class="tab"><a href="#test4">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+ <!-- Chats --> 
+<section>
+  <ul class="collection">
+    <li class="collection-item avatar" v-for="user in users">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1089577/contact3.jpg" alt="" class="circle">
+      <span class="title"><strong>{{ user.name }}</strong></span>
+      <p>{{ user.address.street }}...</p>
+      <a href="#!" class="secondary-content">
+        <span class="grey-text">12:0{{ user.id }} PM</span>
+        <span class="new badge red">{{ user.address.zipcode[0] }}</span>
+      </a>
+    </li>
+  </ul>
+</section>
+<div class="fixed-action-btn" @click="notificationSound">
+  <a class="btn-floating btn-large green-what">
+    <i class="large material-icons">forum</i>
+  </a>
+</div>
+</main>
